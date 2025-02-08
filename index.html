@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background: url('77.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(0, 123, 255, 0.9); /* Blue background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+            max-width: 300px;
+            color: white; /* Text color */
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #0056b3;
+            border-radius: 5px;
+            background: #e3f2fd; /* Light blue */
+        }
+        button {
+            background-color: #0056b3; /* Darker blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #003d80; /* Darker hover effect */
+        }
+        .error {
+            color: #ffcccc;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Holdikk Finance</h2>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <button onclick="login()">Login</button>
+        <p id="errorMessage" class="error"></p>
+    </div>
+
+    <script>
+        function login() {
+            let name = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+
+            let users = {
+                "amogh": "1",
+                "tarun": "2",
+                "amar": "3"
+            };
+
+            if (users[name] && users[name] === password) {
+                window.location.href = "welcome.html?name=" + encodeURIComponent(name);
+            } else {
+                document.getElementById("errorMessage").innerText = "Invalid name or password!";
+            }
+        }
+    </script>
+
+</body>
+</html>

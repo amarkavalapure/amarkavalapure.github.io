@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 123, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+            max-width: 400px;
+            text-align: center;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #003d80;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="sectionTitle"></h2>
+        <p>Welcome, <span id="userName"></span>! You selected: <strong id="selectedSection"></strong></p>
+        <button onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        let section = params.get("section");
+        let name = params.get("name");
+
+        document.getElementById("userName").innerText = name || "Guest";
+        document.getElementById("selectedSection").innerText = section ? section.toUpperCase() : "Unknown";
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

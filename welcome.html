@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            background: url('background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 123, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+            max-width: 400px;
+            text-align: center;
+        }
+        .blocks {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .block {
+            background: white;
+            color: #007bff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .block:hover {
+            background: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="welcomeMessage"></h2>
+        <p>Select an option:</p>
+        <div class="blocks">
+            <div class="block" onclick="openPage('mfd')">MFD</div>
+            <div class="block" onclick="openPage('tef')">TEF</div>
+            <div class="block" onclick="openPage('moe')">MOE</div>
+        </div>
+    </div>
+
+    <script>
+        // Get the name from the URL
+        let params = new URLSearchParams(window.location.search);
+        let name = params.get("name");
+
+        if (name) {
+            document.getElementById("welcomeMessage").innerText = "Welcome, " + name + "!";
+        } else {
+            document.getElementById("welcomeMessage").innerText = "Welcome!";
+        }
+
+        // Function to open the selected page
+        function openPage(section) {
+            window.location.href = "page.html?section=" + section + "&name=" + encodeURIComponent(name);
+        }
+    </script>
+
+</body>
+</html>
