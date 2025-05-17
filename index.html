@@ -3,80 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Projivance - Advance Your College Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            background: url('77.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        .container {
-            background: rgba(0, 123, 255, 0.9); /* Blue background */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
-            max-width: 300px;
-            color: white; /* Text color */
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0, 0, 50, 0.7), rgba(0, 0, 80, 0.8)), url('https://placehold.co/1920x1080/2d3748/718096?text=Abstract+Background');
+            background-size: cover;
+            background-position: center;
         }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #0056b3;
-            border-radius: 5px;
-            background: #e3f2fd; /* Light blue */
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800;
         }
-        button {
-            background-color: #0056b3; /* Darker blue */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1;
         }
-        button:hover {
-            background-color: #003d80; /* Darker hover effect */
+        .cta-button {
+            @apply px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300;
         }
-        .error {
-            color: #ffcccc;
-            margin-top: 10px;
-            font-weight: bold;
+        .nav-link {
+            @apply text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300;
+        }
+         /* Mobile menu toggle button styling */
+        .mobile-menu-button {
+            @apply md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500;
+        }
+        /* Custom scrollbar for better aesthetics (optional) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
-    <div class="container">
-        <h2>Holdikk Finance</h2>
-        <input type="text" id="name" placeholder="Enter your name" required>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <button onclick="login()">Login</button>
-        <p id="errorMessage" class="error"></p>
-    </div>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-600">
+                    <a href="#">Projivance</a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="cta-button text-sm px-6 py-2">Get Started</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="mobile-menu-button">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden mt-2 space-y-1">
+                <a href="#home" class="block nav-link text-base">Home</a>
+                <a href="#about" class="block nav-link text-base">About Us</a>
+                <a href="#services" class="block nav-link text-base">Services</a>
+                <a href="#projects" class="block nav-link text-base">Projects</a>
+                <a href="#contact" class="block cta-button text-base w-full text-center mt-2">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Advance Your College Career with Projivance
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
+                Get high-quality, custom-developed projects tailored for your academic success. From concept to completion, we're here to help.
+            </p>
+            <a href="#projects" class="cta-button text-lg">Explore Project Ideas</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Why Choose Projivance?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Quality Assured Projects</h3>
+                    <p class="text-gray-600">Expertly crafted projects meeting academic standards, ensuring originality and relevance.</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">On-Time Delivery</h3>
+                    <p class="text-gray-600">We understand deadlines. Receive your projects promptly, giving you ample time for review.</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Dedicated Support</h3>
+                    <p class="text-gray-600">Our team is here to assist you throughout the project lifecycle, from query to completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Our Project Domains</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Computer+Science" alt="Computer Science Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Computer Science & IT</h3>
+                        <p class="text-gray-600 mb-4">Web development, mobile apps, AI/ML, data science, cybersecurity projects, and more.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/10b981/ffffff?text=Engineering" alt="Engineering Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Engineering Disciplines</h3>
+                        <p class="text-gray-600 mb-4">Projects for Mechanical, Electrical, Civil, and Electronics engineering students.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Business+&+Management" alt="Business Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Business & Management</h3>
+                        <p class="text-gray-600 mb-4">Market research, business plans, case studies, financial analysis, and strategic reports.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Creative+Arts" alt="Creative Arts Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Creative Arts & Design</h3>
+                        <p class="text-gray-600 mb-4">Graphic design, UI/UX projects, animation, digital media, and portfolio development.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/ec4899/ffffff?text=Research+Papers" alt="Research Papers" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Research & Thesis Work</h3>
+                        <p class="text-gray-600 mb-4">Assistance with literature reviews, methodology, data analysis, and paper writing.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/6366f1/ffffff?text=Custom+Projects" alt="Custom Projects" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Custom Project Requests</h3>
+                        <p class="text-gray-600 mb-4">Have a unique idea? We can build custom projects tailored to your specific requirements.</p>
+                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Our Simple Process</h2>
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">1</div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Submit Your Request</h3>
+                    <p class="text-gray-600 text-sm">Tell us about your project needs and requirements.</p>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">2</div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Get a Quote & Plan</h3>
+                    <p class="text-gray-600 text-sm">We'll provide a detailed proposal and timeline.</p>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">3</div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Project Development</h3>
+                    <p class="text-gray-600 text-sm">Our experts get to work, keeping you updated.</p>
+                </div>
+                <div class="flex flex-col items-center p-4">
+                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">4</div>
+                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Receive Your Project</h3>
+                    <p class="text-gray-600 text-sm">Get your completed project, ready for submission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-gray-600 italic mb-4">"Projivance delivered an outstanding project that exceeded my expectations. The quality and attention to detail were fantastic. Highly recommended!"</p>
+                    <p class="text-gray-800 font-semibold">- Sarah L., Computer Science Student</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <p class="text-gray-600 italic mb-4">"The team was incredibly supportive and delivered my project well before the deadline. It helped me secure a top grade. Thank you, Projivance!"</p>
+                    <p class="text-gray-800 font-semibold">- John B., Engineering Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Next Project?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-xl mx-auto text-blue-100">
+                Let Projivance take the stress out of your college projects. Contact us today for a free consultation and quote.
+            </p>
+            <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl text-left">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name" required>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="project_details" class="block text-gray-700 text-sm font-bold mb-2">Project Details</label>
+                    <textarea id="project_details" name="project_details" rows="4" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Briefly describe your project requirements..." required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="cta-button bg-green-500 hover:bg-green-600">
+                        Send Request
+                    </button>
+                </div>
+                 <p class="text-xs text-gray-500 mt-4 text-center">We'll get back to you within 24 hours.</p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Projivance</h3>
+                    <p class="text-sm">Empowering students with high-quality academic projects. Your success is our priority.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition-colors">Our Services</a></li>
+                        <li><a href="#projects" class="hover:text-blue-400 transition-colors">Project Examples</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.023.047 1.351.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.047-1.023.058-1.351.058-3.807v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344C14.99 3.813 14.645 3.802 12.234 3.802zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; <span id="currentYear"></span> Projivance. All Rights Reserved.</p>
+                 <p>Designed with <span class="text-red-500">&hearts;</span> using Tailwind CSS.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        function login() {
-            let name = document.getElementById("name").value;
-            let password = document.getElementById("password").value;
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle ARIA attribute for accessibility
+            const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+            mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+        });
 
-            let users = {
-                "amogh": "1",
-                "tarun": "2",
-                "amar": "3"
-            };
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu after clicking a link (if open)
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
 
-            if (users[name] && users[name] === password) {
-                window.location.href = "welcome.html?name=" + encodeURIComponent(name);
-            } else {
-                document.getElementById("errorMessage").innerText = "Invalid name or password!";
-            }
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Basic form submission handler (for demonstration)
+        // In a real application, you'd send this data to a server.
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent actual submission
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const projectDetails = document.getElementById('project_details').value;
+
+                if (name && email && projectDetails) {
+                    // For demonstration, we'll just log to console and show a message
+                    console.log('Form Submitted:', { name, email, projectDetails });
+                    
+                    // Create a simple success message
+                    const successMessage = document.createElement('p');
+                    successMessage.textContent = 'Thank you for your request! We will get back to you soon.';
+                    successMessage.className = 'text-green-300 text-sm mt-4 text-center';
+                    
+                    // Clear previous messages and append new one
+                    const existingMessage = contactForm.querySelector('.text-green-300, .text-red-300');
+                    if (existingMessage) {
+                        existingMessage.remove();
+                    }
+                    contactForm.appendChild(successMessage);
+                    
+                    contactForm.reset(); // Clear the form
+                } else {
+                     // Create a simple error message
+                    const errorMessage = document.createElement('p');
+                    errorMessage.textContent = 'Please fill out all fields.';
+                    errorMessage.className = 'text-red-300 text-sm mt-4 text-center';
+
+                    const existingMessage = contactForm.querySelector('.text-green-300, .text-red-300');
+                    if (existingMessage) {
+                        existingMessage.remove();
+                    }
+                    contactForm.appendChild(errorMessage);
+                }
+            });
         }
+
     </script>
 
 </body>
