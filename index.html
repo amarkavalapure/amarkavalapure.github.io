@@ -1,38 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projivance - Advance Your College Projects</title>
+    <title>Amar Kavalapure - Automation & Robotics Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            /* scroll-behavior: smooth; This is now handled by the 'scroll-smooth' class on the html tag */
         }
-        .hero-bg {
-            background-image: linear-gradient(to right, rgba(0, 0, 50, 0.7), rgba(0, 0, 80, 0.8)), url('https://placehold.co/1920x1080/2d3748/718096?text=Abstract+Background');
-            background-size: cover;
-            background-position: center;
-        }
-        .section-title {
-            @apply text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800;
-        }
-        .card {
-            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1;
-        }
-        .cta-button {
-            @apply px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300;
-        }
-        .nav-link {
-            @apply text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300;
-        }
-         /* Mobile menu toggle button styling */
-        .mobile-menu-button {
-            @apply md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500;
-        }
-        /* Custom scrollbar for better aesthetics (optional) */
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -46,245 +26,227 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
+        /* Styles previously defined with @apply, now applied directly in HTML */
+        /* .section-title: text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 */
+        /* .card: bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 */
+        /* .btn-primary: px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 */
+        /* .btn-secondary: px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition-colors duration-300 */
+        /* .nav-link: text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 */
+        /* .mobile-menu-button: md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 */
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-gray-800">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-blue-600">
-                    <a href="#">Projivance</a>
+        <nav class="container mx-auto px-6 py-4"> <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-700"> <a href="#">Amar Kavalapure</a>
                 </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About Us</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="cta-button text-sm px-6 py-2">Get Started</a>
-                </div>
+                <div class="hidden md:flex space-x-6 items-center"> <a href="#about" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                    <a href="#experience" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Experience</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Skills</a>
+                     <a href="#education" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Education</a>
+                    <a href="#contact" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-sm">Contact</a> </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="mobile-menu-button">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-label="Toggle mobile menu" aria-expanded="false">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="md:hidden hidden mt-2 space-y-1">
-                <a href="#home" class="block nav-link text-base">Home</a>
-                <a href="#about" class="block nav-link text-base">About Us</a>
-                <a href="#services" class="block nav-link text-base">Services</a>
-                <a href="#projects" class="block nav-link text-base">Projects</a>
-                <a href="#contact" class="block cta-button text-base w-full text-center mt-2">Get Started</a>
+            <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-2 px-2 pt-2 pb-3 border-t border-gray-200"> <a href="#about" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">About</a>
+                <a href="#experience" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Experience</a>
+                <a href="#projects" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Projects</a>
+                <a href="#skills" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Skills</a>
+                 <a href="#education" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Education</a>
+                <a href="#contact" class="block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-base text-center mt-2">Contact</a>
             </div>
         </nav>
     </header>
 
-    <section id="home" class="hero-bg text-white py-20 md:py-32">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Advance Your College Career with Projivance
+    <section id="hero" class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 md:py-36"> <div class="container mx-auto px-6 text-center">
+             <img src="https://placehold.co/180x180/ffffff/000000?text=Your+Photo" alt="Amar Kavalapure Profile" class="rounded-full mx-auto mb-8 shadow-xl border-4 border-blue-300"> <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight"> Amar Kavalapure
             </h1>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
-                Get high-quality, custom-developed projects tailored for your academic success. From concept to completion, we're here to help.
+            <p class="text-xl md:text-2xl font-medium text-blue-200 mb-8">
+               Automation & Robotics Engineer
             </p>
-            <a href="#projects" class="cta-button text-lg">Explore Project Ideas</a>
+            <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-12 leading-relaxed"> Detail-oriented engineer with experience in robotics, automation, and data analysis,
+                passionate about building innovative solutions for real-world challenges.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"> <a href="#projects" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">View Projects</a> <a href="#contact" class="px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg shadow-md hover:bg-blue-900 transition-colors duration-300">Get In Touch</a> </div>
         </div>
     </section>
 
     <section id="about" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">Why Choose Projivance?</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Quality Assured Projects</h3>
-                    <p class="text-gray-600">Expertly crafted projects meeting academic standards, ensuring originality and relevance.</p>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">On-Time Delivery</h3>
-                    <p class="text-gray-600">We understand deadlines. Receive your projects promptly, giving you ample time for review.</p>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-center mb-4">
-                        <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Dedicated Support</h3>
-                    <p class="text-gray-600">Our team is here to assist you throughout the project lifecycle, from query to completion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">Our Project Domains</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card">
-                    <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Computer+Science" alt="Computer Science Projects" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Computer Science & IT</h3>
-                        <p class="text-gray-600 mb-4">Web development, mobile apps, AI/ML, data science, cybersecurity projects, and more.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400/10b981/ffffff?text=Engineering" alt="Engineering Projects" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Engineering Disciplines</h3>
-                        <p class="text-gray-600 mb-4">Projects for Mechanical, Electrical, Civil, and Electronics engineering students.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://placehold.co/600x400/f59e0b/ffffff?text=Business+&+Management" alt="Business Projects" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Business & Management</h3>
-                        <p class="text-gray-600 mb-4">Market research, business plans, case studies, financial analysis, and strategic reports.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Creative+Arts" alt="Creative Arts Projects" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Creative Arts & Design</h3>
-                        <p class="text-gray-600 mb-4">Graphic design, UI/UX projects, animation, digital media, and portfolio development.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/ec4899/ffffff?text=Research+Papers" alt="Research Papers" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Research & Thesis Work</h3>
-                        <p class="text-gray-600 mb-4">Assistance with literature reviews, methodology, data analysis, and paper writing.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-                 <div class="card md:col-span-1 lg:col-span-1"> <img src="https://placehold.co/600x400/6366f1/ffffff?text=Custom+Projects" alt="Custom Projects" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Custom Project Requests</h3>
-                        <p class="text-gray-600 mb-4">Have a unique idea? We can build custom projects tailored to your specific requirements.</p>
-                        <a href="#contact" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="how-it-works" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">Our Simple Process</h2>
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div class="flex flex-col items-center p-4">
-                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">1</div>
-                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Submit Your Request</h3>
-                    <p class="text-gray-600 text-sm">Tell us about your project needs and requirements.</p>
-                </div>
-                <div class="flex flex-col items-center p-4">
-                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">2</div>
-                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Get a Quote & Plan</h3>
-                    <p class="text-gray-600 text-sm">We'll provide a detailed proposal and timeline.</p>
-                </div>
-                <div class="flex flex-col items-center p-4">
-                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">3</div>
-                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Project Development</h3>
-                    <p class="text-gray-600 text-sm">Our experts get to work, keeping you updated.</p>
-                </div>
-                <div class="flex flex-col items-center p-4">
-                    <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4">4</div>
-                    <h3 class="text-lg font-semibold mb-2 text-gray-700">Receive Your Project</h3>
-                    <p class="text-gray-600 text-sm">Get your completed project, ready for submission.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="testimonials" class="py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <p class="text-gray-600 italic mb-4">"Projivance delivered an outstanding project that exceeded my expectations. The quality and attention to detail were fantastic. Highly recommended!"</p>
-                    <p class="text-gray-800 font-semibold">- Avinash Patil, Computer Science Student</p>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <p class="text-gray-600 italic mb-4">"The team was incredibly supportive and delivered my project well before the deadline. It helped me secure a top grade. Thank you, Projivance!"</p>
-                    <p class="text-gray-800 font-semibold">- Disha M, Engineering Student</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-16 md:py-24 bg-blue-600 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Next Project?</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-xl mx-auto text-blue-100">
-                Let Projivance take the stress out of your college projects. Contact us today for a free consultation and quote.
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2> <p class="text-lg text-gray-700 mb-6 leading-relaxed"> I am currently pursuing a degree in Automation and Robotics Engineering at KLE Technological University. My academic journey has been complemented by practical experience through internships and research, focusing on bridging the gap between theoretical knowledge and real-world applications in automation, robotics, and data-driven decision making.
             </p>
-            <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl text-left">
-                <div class="mb-6">
-                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name" required>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="you@example.com" required>
-                </div>
-                <div class="mb-6">
-                    <label for="project_details" class="block text-gray-700 text-sm font-bold mb-2">Project Details</label>
-                    <textarea id="project_details" name="project_details" rows="4" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Briefly describe your project requirements..." required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="cta-button bg-green-500 hover:bg-green-600">
-                        Send Request
-                    </button>
-                </div>
-                 <p class="text-xs text-gray-500 mt-4 text-center">We'll get back to you within 24 hours.</p>
-            </form>
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed"> My interests lie in autonomous systems, optimizing processes, and leveraging data and AI/ML techniques to create efficient and intelligent solutions. I am adept at programming in Python and C++, with experience in web development using Flask and Node.js, and robotics frameworks like ROS.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed"> I am always eager to learn and contribute to projects that push the boundaries of technology, particularly in areas that automate tasks, enhance productivity, and solve complex engineering problems.
+            </p>
         </div>
+    </section>
+
+    <section id="experience" class="py-16 md:py-24 bg-gray-100"> <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Experience</h2> <div class="max-w-3xl mx-auto space-y-8">
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600"> <div class="flex justify-between items-start mb-2"> <div>
+                             <h3 class="text-xl font-semibold text-gray-800">Intern</h3>
+                             <p class="text-gray-700 font-medium">Bosch Automotive Electronics India Private Limited</p>
+                        </div>
+                        <span class="text-sm text-gray-600 text-right">January 2025 - Present</span> </div>
+                     <p class="text-gray-600 text-sm mb-4">Bangalore, India</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 leading-relaxed"> <li>Analyzing Autonomous Mobile Robot (AMR) data to identify operational issues, optimize efficiency, and enhance human resource allocation on the shop floor.</li>
+                        <li>Developed and deployed a web-based application for real-time lot formation in the SMT production line, improving workflow and process tracking.</li>
+                        <li>Developing an automated system to calculate First Pass Yield (FPY) and integrating an interactive chatbot to assist operators and engineers with real-time insights and recommendations.</li>
+                    </ul>
+                </div>
+
+                 <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-blue-600"> <div class="flex justify-between items-start mb-2"> <div>
+                             <h3 class="text-xl font-semibold text-gray-800">Undergraduate Researcher</h3>
+                             <p class="text-gray-700 font-medium">Center For Automation And Robotics Research</p>
+                        </div>
+                         <span class="text-sm text-gray-600 text-right">June 2024 - December 2024</span> </div>
+                     <p class="text-gray-600 text-sm mb-4">BVB Campus, Hubli</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 leading-relaxed"> <li>Developed autonomous navigation strategies for AMRs using affordance-based mobility.</li>
+                        <li>Integrated YOLOv8 for real-time obstacle detection, classifying obstacles as movable or non-movable.</li>
+                        <li>Implemented logic to push movable obstacles aside and trigger path replanning for non-movable ones.</li>
+                         <li>Achieved 87% accuracy for movable and 81% for non-movable obstacle detection in smart manufacturing lab tests.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Projects</h2> <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/3b82f6/e0f2f7?text=Vertical+Farming" alt="Moisture Vertical Farming Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Moisture Vertical Farming</h3>
+                        <p class="text-sm text-gray-600 mb-3">Arduino, Soil Moisture Sensor, DHT11, SolidWorks</p>
+                        <p class="text-gray-700 mb-4 leading-relaxed"> An indoor organic farming system using a moisture-based control with an artificial humidifier, designed for minimal soil usage, water conservation, and optimized yield.
+                        </p>
+                         <p class="text-sm font-semibold text-green-700 mb-4">
+                             ★ Recognized as Project of the Year 2024 by Dassault Systèmes
+                         </p>
+                         <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/10b981/d1fae5?text=Line+Marking+Bot" alt="Line Marking Bot Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Line Marking Bot</h3>
+                        <p class="text-sm text-gray-600 mb-3">Raspberry Pi, Python, Ultrasonic Sensors</p>
+                        <p class="text-gray-700 mb-4 leading-relaxed"> Automated line marking bot capable of interpreting user inputs for patterns (squares, circles, game maps) with precise chalk dispensing and ultrasonic obstacle detection. Operated via a user-friendly Python interface.
+                        </p>
+                         <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/f59e0b/fff3e0?text=Cafe+System" alt="Cafe Management System Project Image" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Cafe Management System</h3>
+                        <p class="text-sm text-gray-600 mb-3">MySQL</p>
+                        <p class="text-gray-700 mb-4 leading-relaxed"> A comprehensive system developed using MySQL to manage orders, inventory, and employee schedules for a cafe, enabling real-time inventory updates and streamlined order processing.
+                        </p>
+                         <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+             <div class="text-center mt-12">
+                 <p class="text-gray-600 italic">Replace placeholder images and "Learn More" links with actual content and URLs.</p>
+             </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 md:py-24 bg-gray-100"> <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Skills</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700"> <div>
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800 border-b-2 border-blue-600 pb-2 inline-block">Technical Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed"> <li>Programming Languages: C++, Python, HTML, CSS, JavaScript</li>
+                        <li>Web Development: Flask, Node.js</li>
+                        <li>Robotics and Automation: ROS, PLC Programming</li>
+                        <li>Machine Learning</li>
+                        <li>SQL</li>
+                        <li>SolidWorks</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold mb-6 text-gray-800 border-b-2 border-blue-600 pb-2 inline-block">Soft Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed"> <li>Problem-solving</li>
+                        <li>Creativity</li>
+                        <li>Leadership</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Education</h2> <div class="space-y-8 text-gray-700">
+
+                 <div>
+                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1"> <div>
+                             <h3 class="text-xl font-semibold text-gray-800">Automation and Robotics Engineering</h3>
+                             <p class="font-medium text-gray-700">KLE Technological University</p>
+                         </div>
+                         <span class="text-sm text-gray-600 mt-1 sm:mt-0">Dec 2021 - Present</span> </div>
+                     <p class="text-gray-600 mb-2">Hubli</p>
+                     <p>CGPA: 8.47</p>
+                 </div>
+
+                 <div>
+                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1"> <div>
+                             <h3 class="text-xl font-semibold text-gray-800">Pre-University</h3>
+                             <p class="font-medium text-gray-700">KLE Prerana PU College</p>
+                         </div>
+                          <span class="text-sm text-gray-600 mt-1 sm:mt-0">Jun 2020 - May 2021</span> </div>
+                     <p class="text-gray-600 mb-2">Hubli</p>
+                     <p>Percentage: 87.3</p>
+                 </div>
+
+                 <div>
+                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1"> <div>
+                             <h3 class="text-xl font-semibold text-gray-800">School</h3>
+                             <p class="font-medium text-gray-700">St. Francis Of Assisi School</p>
+                         </div>
+                          <span class="text-sm text-gray-600 mt-1 sm:mt-0">Aug 2018 - May 2019</span> </div>
+                     <p class="text-gray-600 mb-2">Chikkodi</p>
+                     <p>Percentage: 77.6</p>
+                 </div>
+
+             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-blue-700 to-purple-800 text-white"> <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2> <p class="text-lg md:text-xl mb-12 text-blue-200 leading-relaxed"> Feel free to connect with me regarding collaborations, opportunities, or just to say hello!
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                 <a href="mailto:amarkavalapure7@gmail.com" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
+                    Email Me
+                 </a>
+                 <a href="https://www.linkedin.com/in/amar-kavalapure" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
+                    LinkedIn
+                 </a>
+                  <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
+                    GitHub
+                 </a>
+             </div>
+             <p class="text-sm text-blue-200 mt-10">Phone: +91 9019772299</p> </div>
     </section>
 
     <footer class="bg-gray-800 text-gray-300 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Projivance</h3>
-                    <p class="text-sm">Empowering students with high-quality academic projects. Your success is our priority.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#about" class="hover:text-blue-400 transition-colors">About Us</a></li>
-                        <li><a href="#services" class="hover:text-blue-400 transition-colors">Our Services</a></li>
-                        <li><a href="#projects" class="hover:text-blue-400 transition-colors">Project Examples</a></li>
-                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-white mb-4">Connect With Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.023.047 1.351.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.047-1.023.058-1.351.058-3.807v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344C14.99 3.813 14.645 3.802 12.234 3.802zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
-                <p>&copy; <span id="currentYear"></span> Projivance. All Rights Reserved.</p>
-                 <p>Designed with <span class="text-red-500">&hearts;</span> using Tailwind CSS.</p>
-            </div>
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; <span id="currentYear"></span> Amar Kavalapure. All rights reserved.</p>
+          
         </div>
     </footer>
 
@@ -293,75 +255,62 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
-            // Toggle ARIA attribute for accessibility
-            const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-            mobileMenuBtn.setAttribute('aria-expanded', !expanded);
         });
 
-        // Smooth scroll for navigation links
+        // Smooth scroll for navigation links and close mobile menu
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    // Close mobile menu after clicking a link (if open)
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                    }
-                }
+                // Check if it's a hash link AND not just '#'
+                 if (this.getAttribute('href').length > 1) {
+                    e.preventDefault(); // Prevent default only for internal hash links
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                     if (targetElement) {
+                         // Use native smooth scroll (added scroll-smooth class to html)
+                         targetElement.scrollIntoView({ behavior: 'smooth' });
+                     }
+
+                     // Close mobile menu after clicking a link (if open)
+                     if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                     }
+                 }
             });
         });
+
 
         // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Basic form submission handler (for demonstration)
-        // In a real application, you'd send this data to a server.
-        const contactForm = document.querySelector('#contact form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent actual submission
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const projectDetails = document.getElementById('project_details').value;
+         // Optional: Intersection Observer for fade-in effect (uncomment and test if desired)
+         // Note: This requires adding initial styles like opacity-0 and translate-y-10 to the sections.
+         // It might conflict slightly with the scroll-smooth class on html depending on implementation details.
+         // const sections = document.querySelectorAll('section');
+         // const observerOptions = {
+         //    root: null, // viewport
+         //    rootMargin: '0px',
+         //    threshold: 0.1 // Trigger when 10% of the section is visible
+         // };
 
-                if (name && email && projectDetails) {
-                    // For demonstration, we'll just log to console and show a message
-                    console.log('Form Submitted:', { name, email, projectDetails });
-                    
-                    // Create a simple success message
-                    const successMessage = document.createElement('p');
-                    successMessage.textContent = 'Thank you for your request! We will get back to you soon.';
-                    successMessage.className = 'text-green-300 text-sm mt-4 text-center';
-                    
-                    // Clear previous messages and append new one
-                    const existingMessage = contactForm.querySelector('.text-green-300, .text-red-300');
-                    if (existingMessage) {
-                        existingMessage.remove();
-                    }
-                    contactForm.appendChild(successMessage);
-                    
-                    contactForm.reset(); // Clear the form
-                } else {
-                     // Create a simple error message
-                    const errorMessage = document.createElement('p');
-                    errorMessage.textContent = 'Please fill out all fields.';
-                    errorMessage.className = 'text-red-300 text-sm mt-4 text-center';
+         // const observer = new IntersectionObserver((entries, observer) => {
+         //    entries.forEach(entry => {
+         //        if (entry.isIntersecting) {
+         //            entry.target.classList.add('opacity-100', 'translate-y-0');
+         //            observer.unobserve(entry.target); // Stop observing once it's visible
+         //        }
+         //    });
+         // }, observerOptions);
 
-                    const existingMessage = contactForm.querySelector('.text-green-300, .text-red-300');
-                    if (existingMessage) {
-                        existingMessage.remove();
-                    }
-                    contactForm.appendChild(errorMessage);
-                }
-            });
-        }
+         // sections.forEach(section => {
+         //    // Add initial state classes *before* observing if you use this
+         //    // section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+         //    // observer.observe(section);
+         // });
+
 
     </script>
 
