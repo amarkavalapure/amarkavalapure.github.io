@@ -1,299 +1,250 @@
-    <!DOCTYPE html>
-    <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Amar Kavalapure - Automation & Robotics Engineer</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-        <style>
-            body {
-                font-family: 'Inter', sans-serif;
-                /* scroll-behavior: smooth; This is now handled by the 'scroll-smooth' class on the html tag */
-            }
-            /* Custom scrollbar */
-            ::-webkit-scrollbar {
-                width: 8px;
-            }
-            ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 4px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555;
-            }
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amar Kavalapure - Automation & Robotics Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c; /* Darker track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Lighter thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Lighter hover */
+        }
 
-            /* Styles previously defined with @apply, now applied directly in HTML */
-            /* .section-title: text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 */
-            /* .card: bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 */
-            /* .btn-primary: px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 */
-            /* .btn-secondary: px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition-colors duration-300 */
-            /* .nav-link: text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 */
-            /* .mobile-menu-button: md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 */
-        </style>
-    </head>
-    <body class="bg-gray-50 text-gray-800">
-
-        <header class="bg-white shadow-sm sticky top-0 z-50">
-            <nav class="container mx-auto px-6 py-4"> <div class="flex items-center justify-between">
-                    <div class="text-2xl font-bold text-blue-700"> <a href="#">Amar Kavalapure</a>
-                    </div>
-                    <div class="hidden md:flex space-x-6 items-center"> <a href="#about" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
-                        <!-- <a href="#experience" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Experience</a> -->
-                        <a href="#projects" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Projects</a>
-                        <a href="#skills" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Skills</a>
-                        <!-- <a href="#education" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Education</a> -->
-                        <a href="#contact" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-sm">Contact</a> </div>
-                    <div class="md:hidden">
-                        <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-label="Toggle mobile menu" aria-expanded="false">
-                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
-                        </button>
-                    </div>
+        /* Styles previously defined with @apply, now applied directly in HTML */
+        /* .section-title: text-3xl md:text-4xl font-bold text-center mb-12 */
+        /* .card: rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1 */
+        /* .btn-primary: px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 */
+        /* .btn-secondary: px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition-colors duration-300 */
+        /* .nav-link: text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 */
+        /* .mobile-menu-button: md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 */
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200"> <header class="bg-gray-800 shadow-sm sticky top-0 z-50"> <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-400"> <a href="#">Amar Kavalapure</a>
                 </div>
-                <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-2 px-2 pt-2 pb-3 border-t border-gray-200"> <a href="#about" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">About</a>
-                    <!-- <a href="#experience" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Experience</a> -->
-                    <a href="#projects" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Projects</a>
-                    <a href="#skills" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Skills</a>
-                    <!-- <a href="#education" class="block text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Education</a> -->
-                    <a href="#contact" class="block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-base text-center mt-2">Contact</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#about" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a> <a href="#projects" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Skills</a>
+                     <a href="#contact" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-sm">Contact</a>
                 </div>
-            </nav>
-        </header>
-
-        <section id="hero" class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 md:py-36"> <div class="container mx-auto px-6 text-center">
-                <img src="https://placehold.co/180x180/ffffff/000000?text=Your+Photo" alt="Amar Kavalapure Profile" class="rounded-full mx-auto mb-8 shadow-xl border-4 border-blue-300"> <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight"> Amar Kavalapure
-                </h1>
-                <p class="text-xl md:text-2xl font-medium text-blue-200 mb-8">
-                Automation & Robotics Engineer
-                </p>
-                <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-12 leading-relaxed"> Detail-oriented engineer with experience in robotics, automation, and data analysis,
-                    passionate about building innovative solutions for real-world challenges.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"> <a href="#projects" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">View Projects</a> <a href="#contact" class="px-6 py-3 bg-blue-800 text-white font-semibold rounded-lg shadow-md hover:bg-blue-900 transition-colors duration-300">Get In Touch</a> </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-label="Toggle mobile menu" aria-expanded="false"> <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </section>
-
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">About Me</h2> <p class="text-lg text-gray-700 mb-6 leading-relaxed"> I am currently pursuing a degree in Automation and Robotics Engineering at KLE Technological University. My academic journey has been complemented by practical experience through internships and research, focusing on bridging the gap between theoretical knowledge and real-world applications in automation, robotics, and data-driven decision making.
-                </p>
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed"> My interests lie in autonomous systems, optimizing processes, and leveraging data and AI/ML techniques to create efficient and intelligent solutions. I am adept at programming in Python and C++, with experience in web development using Flask and Node.js, and robotics frameworks like ROS.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed"> I am always eager to learn and contribute to projects that push the boundaries of technology, particularly in areas that automate tasks, enhance productivity, and solve complex engineering problems.
-                </p>
+            <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-2 px-2 pt-2 pb-3 border-t border-gray-700"> <a href="#about" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">About</a> <a href="#projects" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Projects</a>
+                <a href="#skills" class="block text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">Skills</a>
+                 <a href="#contact" class="block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 text-base text-center mt-2">Contact</a>
             </div>
-        </section>
+        </nav>
+    </header>
 
-
-                   
-
-<section id="projects" class="py-16 md:py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                     <img src="https://placehold.co/600x400/ff7f50/fff?text=Review+Detection" alt="Fake Product Review Detection Project Image" class="w-full h-48 object-cover">
-                     <div class="p-6">
-                         <h3 class="text-xl font-semibold mb-2 text-gray-800">Fake Product Review Detection</h3>
-                         <p class="text-sm text-gray-600 mb-3">Python, Flask, LSTM, NLP, TensorFlow/PyTorch, HTML, CSS, JS</p>
-                         <p class="text-gray-700 mb-4 leading-relaxed">
-                             Built a system to classify product reviews as genuine or fake using LSTM neural networks and NLP techniques. Developed a web interface with Flask, HTML, CSS, and JavaScript for interactive detection and demonstration.
-                         </p>
-                          <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                     </div>
-                 </div>
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                    <img src="https://placehold.co/600x400/3b82f6/e0f2f7?text=Vertical+Farming" alt="Moisture Vertical Farming Project Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Moisture Vertical Farming</h3>
-                        <p class="text-sm text-gray-600 mb-3">Arduino, Soil Moisture Sensor, DHT11, SolidWorks</p>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            An indoor organic farming system using a moisture-based control with an artificial humidifier, designed for minimal soil usage, water conservation, and optimized yield.
-                        </p>
-                        <p class="text-sm font-semibold text-green-700 mb-4">
-                             ★ Recognized as Project of the Year 2024 by Dassault Systèmes
-                        </p>
-                        <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                     <img src="https://placehold.co/600x400/10b981/d1fae5?text=Line+Marking+Bot" alt="Line Marking Bot Project Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Line Marking Bot</h3>
-                        <p class="text-sm text-gray-600 mb-3">Raspberry Pi, Python, Ultrasonic Sensors</p>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Automated line marking bot capable of interpreting user inputs for patterns (squares, circles, game maps) with precise chalk dispensing and ultrasonic obstacle detection. Operated via a user-friendly Python interface.
-                        </p>
-                         <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                     <img src="https://placehold.co/600x400/f59e0b/fff3e0?text=Cafe+System" alt="Cafe Management System Project Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Cafe Management System</h3>
-                        <p class="text-sm text-gray-600 mb-3">MySQL</p>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            A comprehensive system developed using MySQL to manage orders, inventory, and employee schedules for a cafe, enabling real-time inventory updates and streamlined order processing.
-                        </p>
-                         <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                    </div>
-                </div>
-
-                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                      <img src="https://placehold.co/600x400/ef4444/fee2e2?text=Car+Crash+Detection" alt="Car Crash Detection System Project Image" class="w-full h-48 object-cover">
-                     <div class="p-6">
-                         <h3 class="text-xl font-semibold mb-2 text-gray-800">Car Crash Detection System</h3>
-                         <p class="text-sm text-gray-600 mb-3">MPU-6050, ESP8266, SIM800L, NEO-6M GPS</p>
-                         <p class="text-gray-700 mb-4 leading-relaxed">
-                             Developed an advanced crash detection system utilizing an MPU-6050 accelerometer and gyroscope. Integrated the system with a SIM800L GSM module and NEO-6M GPS to send alerts with GPS location to a predefined mobile number via SMS upon crash detection.
-                         </p>
-                          <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                     </div>
-                 </div>
-
-                 <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-1">
-                      <img src="https://placehold.co/600x400/22c55e/f0fdf4?text=Rice+Disease+Detection" alt="Rice Leaf Disease Detection Project Image" class="w-full h-48 object-cover">
-                     <div class="p-6">
-                         <h3 class="text-xl font-semibold mb-2 text-gray-800">Rice Leaf Disease Detection</h3>
-                         <p class="text-sm text-gray-600 mb-3">Python, TensorFlow, MobileNetV5, OpenCV</p>
-                         <p class="text-gray-700 mb-4 leading-relaxed">
-                             Deployed a disease detection system using MobileNetV5, achieving 81% classification accuracy on augmented datasets. Deployed the model with OpenCV for real-time disease detection and image processing.
-                         </p>
-                          <a href="#" class="text-blue-600 font-semibold hover:underline">Learn More &rarr;</a>
-                     </div>
-                 </div>
-
-
+    <section id="hero" class="bg-gradient-to-br from-blue-700 to-purple-800 text-white py-20 md:py-36"> <div class="container mx-auto px-6 text-center">
+             <img src="https://placehold.co/180x180/374151/d1d5db?text=Your+Photo" alt="Amar Kavalapure Profile" class="rounded-full mx-auto mb-8 shadow-xl border-4 border-blue-400"> <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight text-white"> Amar Kavalapure
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-blue-300 mb-8"> Automation & Robotics Engineer
+            </p>
+            <p class="text-lg text-blue-200 max-w-2xl mx-auto mb-12 leading-relaxed"> Detail-oriented engineer with experience in robotics, automation, and data analysis,
+                passionate about building innovative solutions for real-world challenges.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                 <a href="#projects" class="px-6 py-3 bg-gray-700 text-gray-200 font-semibold rounded-lg shadow-md hover:bg-gray-600 transition-colors duration-300">View Projects</a>
+                 <a href="#contact" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300">Get In Touch</a>
             </div>
-             <div class="text-center mt-12">
-               
-             </div>
         </div>
     </section>
 
-        <section id="skills" class="py-16 md:py-24 bg-gray-100"> <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Skills</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-700"> <div>
-                        <h3 class="text-xl font-semibold mb-6 text-gray-800 border-b-2 border-blue-600 pb-2 inline-block">Technical Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed"> <li>Programming Languages: C++, Python</li>
-                            <li>Web Development:HTML, CSS, JavaScript, Flask, Node.js</li>
-                            <li>Robotics and Automation: ROS, PLC Programming</li>
-                            <li>Machine Learning</li>
-                            <li>SQL</li>
-                            <li>SolidWorks</li>
-                            <li>AI & ML : Gen AI , LLM</li>
-                            <li>Libraries & Frameworks: TensorFlow, PyTorch, scikit-learn, OpenCV, NumPy, Pandas</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-6 text-gray-800 border-b-2 border-blue-600 pb-2 inline-block">Soft Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed"> <li>Problem-solving</li>
-                            <li>Creativity</li>
-                            <li>Leadership</li>
-                            <li>Time Management</li>
-                            <li>Adaptability</li>
-                        </ul>
-                    </div>
+    <section id="about" class="py-16 md:py-24 bg-gray-800"> <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">About Me</h2> <p class="text-lg text-gray-300 mb-6 leading-relaxed"> I am currently pursuing a degree in Automation and Robotics Engineering at KLE Technological University. My academic journey has been complemented by practical experience through internships and research, focusing on bridging the gap between theoretical knowledge and real-world applications in automation, robotics, and data-driven decision making.
+            </p>
+            <p class="text-lg text-gray-300 mb-6 leading-relaxed"> My interests lie in autonomous systems, optimizing processes, and leveraging data and AI/ML techniques to create efficient and intelligent solutions. I am adept at programming in Python and C++, with experience in web development using Flask and Node.js, and robotics frameworks like ROS.
+            </p>
+            <p class="text-lg text-gray-300 leading-relaxed"> I am always eager to learn and contribute to projects that push the boundaries of technology, particularly in areas that automate tasks, enhance productivity, and solve complex engineering problems.
+            </p>
+        </div>
+    </section>
+
+
+<section id="projects" class="py-16 md:py-24 bg-gray-900"> <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Projects</h2> <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/ff7f50/374151?text=Review+Detection" alt="Fake Product Review Detection Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                         <h3 class="text-xl font-semibold mb-2 text-white">Fake Product Review Detection (Amazon/Flipkart)</h3> <p class="text-sm text-gray-400 mb-3">Python, Flask, LSTM, NLP, TensorFlow/PyTorch, HTML, CSS, JS</p> <p class="text-gray-300 mb-4 leading-relaxed"> Built a system to classify product reviews as genuine or fake using LSTM neural networks and NLP techniques. Developed a web interface with Flask, HTML, CSS, and JavaScript for interactive detection and demonstration.
+                         </p>
+                          <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                 </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/3b82f6/374151?text=Vertical+Farming" alt="Moisture Vertical Farming Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Moisture Vertical Farming</h3> <p class="text-sm text-gray-400 mb-3">Arduino, Soil Moisture Sensor, DHT11, SolidWorks</p> <p class="text-gray-300 mb-4 leading-relaxed"> An indoor organic farming system using a moisture-based control with an artificial humidifier, designed for minimal soil usage, water conservation, and optimized yield.
+                        </p>
+                        <p class="text-sm font-semibold text-green-400 mb-4"> ★ Recognized as Project of the Year 2024 by Dassault Systèmes
+                        </p>
+                        <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/10b981/374151?text=Line+Marking+Bot" alt="Line Marking Bot Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Line Marking Bot</h3> <p class="text-sm text-gray-400 mb-3">Raspberry Pi, Python, Ultrasonic Sensors</p> <p class="text-gray-300 mb-4 leading-relaxed"> Automated line marking bot capable of interpreting user inputs for patterns (squares, circles, game maps) with precise chalk dispensing and ultrasonic obstacle detection. Operated via a user-friendly Python interface.
+                        </p>
+                         <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/f59e0b/374151?text=Cafe+System" alt="Cafe Management System Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Cafe Management System</h3> <p class="text-sm text-gray-400 mb-3">MySQL</p> <p class="text-gray-300 mb-4 leading-relaxed"> A comprehensive system developed using MySQL to manage orders, inventory, and employee schedules for a cafe, enabling real-time inventory updates and streamlined order processing.
+                        </p>
+                         <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                </div>
+
+                 <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/ef4444/374151?text=Car+Crash+Detection" alt="Car Crash Detection System Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                         <h3 class="text-xl font-semibold mb-2 text-white">Car Crash Detection System</h3> <p class="text-sm text-gray-400 mb-3">MPU-6050, ESP8266, SIM800L, NEO-6M GPS</p> <p class="text-gray-300 mb-4 leading-relaxed"> Developed an advanced crash detection system utilizing an MPU-6050 accelerometer and gyroscope. Integrated the system with a SIM800L GSM module and NEO-6M GPS to send alerts with GPS location to a predefined mobile number via SMS upon crash detection.
+                         </p>
+                          <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                 </div>
+
+                 <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1"> <img src="https://placehold.co/600x400/22c55e/374151?text=Rice+Disease+Detection" alt="Rice Leaf Disease Detection Project Image" class="w-full h-48 object-cover"> <div class="p-6">
+                         <h3 class="text-xl font-semibold mb-2 text-white">Rice Leaf Disease Detection</h3> <p class="text-sm text-gray-400 mb-3">Python, TensorFlow, MobileNetV5, OpenCV</p> <p class="text-gray-300 mb-4 leading-relaxed"> Deployed a disease detection system using MobileNetV5, achieving 81% classification accuracy on augmented datasets. Deployed the model with OpenCV for real-time disease detection and image processing.
+                         </p>
+                          <a href="#" class="text-blue-400 font-semibold hover:underline">Learn More &rarr;</a> </div>
+                 </div>
+
+
+            </div>
+           
+    </section>
+
+
+    <section id="skills" class="py-16 md:py-24 bg-gray-800"> <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Skills</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-200"> <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white border-b-2 border-blue-400 pb-2 inline-block">Technical Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed text-gray-300"> <li>Programming Languages: C++, Python</li>
+                        <li>Web Development:HTML, CSS, JavaScript, Flask, Node.js</li>
+                        <li>Robotics and Automation: ROS, PLC Programming</li>
+                        <li>Machine Learning</li>
+                         <li>Artificial Intelligence & Machine Learning: Generative AI (Gen AI), Large Language Models (LLMs)</li>
+                         <li>ML/AI Libraries: TensorFlow, PyTorch, scikit-learn, OpenCV, NumPy, Pandas</li>
+                         <li>Computer Vision / Object Detection: YOLOv8</li>
+                        <li>SQL</li>
+                        <li>SolidWorks</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold mb-6 text-white border-b-2 border-blue-400 pb-2 inline-block">Soft Skills</h3> <ul class="list-disc list-inside space-y-3 leading-relaxed text-gray-300"> <li>Problem-solving</li>
+                        <li>Creativity</li>
+                        <li>Leadership</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-       
 
-        <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-blue-700 to-purple-800 text-white"> <div class="container mx-auto px-6 text-center max-w-2xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2> <p class="text-lg md:text-xl mb-12 text-blue-200 leading-relaxed"> Feel free to connect with me regarding collaborations, opportunities, or just to say hello!
-                </p>
-                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-                    <a href="mailto:amarkavalapure7@gmail.com" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
-                        Email Me
-                    </a>
-                    <a href="https://www.linkedin.com/in/amar-kavalapure" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
-                        LinkedIn
-                    </a>
-                    <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors duration-300">
-                        GitHub
-                    </a>
-                </div>
-                <p class="text-sm text-blue-200 mt-10">Phone: +91 9019772299</p> </div>
-        </section>
+   
 
-        <footer class="bg-gray-800 text-gray-300 py-12">
-            <div class="container mx-auto px-6 text-center text-sm">
-                <p>&copy; <span id="currentYear"></span> Amar Kavalapure. All rights reserved.</p>
-            
-            </div>
-        </footer>
 
-        <script>
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuBtn.addEventListener('click', () => {
-                const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-blue-800 to-purple-900 text-white"> <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Get In Touch</h2> <p class="text-lg md:text-xl mb-12 text-blue-300 leading-relaxed"> Feel free to connect with me regarding collaborations & opportunities
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                 <a href="mailto:amarkavalapure7@gmail.com" class="px-6 py-3 bg-gray-800 text-blue-400 font-semibold rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300">
+                    Email Me
+                 </a>
+                 <a href="https://www.linkedin.com/in/amar-kavalapure" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gray-800 text-blue-400 font-semibold rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300">
+                    LinkedIn
+                 </a>
+                  <a href="YOUR_GITHUB_PROFILE_URL" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gray-800 text-blue-400 font-semibold rounded-lg shadow-md hover:bg-gray-700 transition-colors duration-300">
+                    GitHub
+                 </a>
+             </div>
+             <p class="text-sm text-blue-300 mt-10">Phone: +91 9019772299</p> </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-12"> <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; <span id="currentYear"></span> Amar Kavalapure. All rights reserved.</p>
+             </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for navigation links and close mobile menu
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Check if it's a hash link AND not just '#'
+                 if (this.getAttribute('href').length > 1) {
+                    e.preventDefault(); // Prevent default only for internal hash links
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                     if (targetElement) {
+                         // Use native smooth scroll (added scroll-smooth class to html)
+                         targetElement.scrollIntoView({ behavior: 'smooth' });
+                     }
+
+                     // Close mobile menu after clicking a link (if open)
+                     if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                         mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                     }
+                 }
             });
-
-            // Smooth scroll for navigation links and close mobile menu
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    // Check if it's a hash link AND not just '#'
-                    if (this.getAttribute('href').length > 1) {
-                        e.preventDefault(); // Prevent default only for internal hash links
-                        const targetId = this.getAttribute('href');
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            // Use native smooth scroll (added scroll-smooth class to html)
-                            targetElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-
-                        // Close mobile menu after clicking a link (if open)
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                });
-            });
+        });
 
 
-            // Set current year in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-            // Optional: Intersection Observer for fade-in effect (uncomment and test if desired)
-            // Note: This requires adding initial styles like opacity-0 and translate-y-10 to the sections.
-            // It might conflict slightly with the scroll-smooth class on html depending on implementation details.
-            // const sections = document.querySelectorAll('section');
-            // const observerOptions = {
-            //    root: null, // viewport
-            //    rootMargin: '0px',
-            //    threshold: 0.1 // Trigger when 10% of the section is visible
-            // };
+         // Optional: Intersection Observer for fade-in effect (uncomment and test if desired)
+         // Note: This requires adding initial styles like opacity-0 and translate-y-10 to the sections.
+         // It might conflict slightly with the scroll-smooth class on html depending on implementation details.
+         // const sections = document.querySelectorAll('section');
+         // const observerOptions = {
+         //    root: null, // viewport
+         //    rootMargin: '0px',
+         //    threshold: 0.1 // Trigger when 10% of the section is visible
+         // };
 
-            // const observer = new IntersectionObserver((entries, observer) => {
-            //    entries.forEach(entry => {
-            //        if (entry.isIntersecting) {
-            //            entry.target.classList.add('opacity-100', 'translate-y-0');
-            //            observer.unobserve(entry.target); // Stop observing once it's visible
-            //        }
-            //    });
-            // }, observerOptions);
+         // const observer = new IntersectionObserver((entries, observer) => {
+         //    entries.forEach(entry => {
+         //        if (entry.isIntersecting) {
+         //            entry.target.classList.add('opacity-100', 'translate-y-0');
+         //            observer.unobserve(entry.target); // Stop observing once it's visible
+         //        }
+         //    });
+         // }, observerOptions);
 
-            // sections.forEach(section => {
-            //    // Add initial state classes *before* observing if you use this
-            //    // section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
-            //    // observer.observe(section);
-            // });
+         // sections.forEach(section => {
+         //    // Add initial state classes *before* observing if you use this
+         //    // section.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-10');
+         //    // observer.observe(section);
+         // });
 
 
-        </script>
+    </script>
 
-    </body>
-    </html>
+</body>
+</html>
